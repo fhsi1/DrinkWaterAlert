@@ -34,6 +34,9 @@ class AlertListViewController: UITableViewController {
     @IBAction func addAlertButtonAction(_ sender: UIBarButtonItem ) {
         guard let addAlertViewController = storyboard?.instantiateViewController(withIdentifier: "AddAlertViewController") as? AddAlertViewController else { return }
         
+        // addAlertViewController present style fullscreen 적용
+        addAlertViewController.modalPresentationStyle = .fullScreen
+        
         // 생성된 alram 을 list 에 표현되도록 closure 구현
         addAlertViewController.pickedDate = { [weak self] date in
             guard let self = self else { return }
