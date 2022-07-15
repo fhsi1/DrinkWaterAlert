@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,13 +20,13 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZt-66-Y0R">
                         <rect key="frame" x="20" y="28" width="49" height="34"/>
                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="28"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" name="secondColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ro-uS-0Hz">
-                        <rect key="frame" x="69" y="10" width="132" height="60"/>
+                        <rect key="frame" x="76" y="10" width="132" height="60"/>
                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="50"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" name="secondColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EBv-Dm-qUn">
@@ -35,10 +36,11 @@
                         </connections>
                     </switch>
                 </subviews>
+                <color key="backgroundColor" name="backgroundColor"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="EBv-Dm-qUn" secondAttribute="trailing" constant="20" id="0UB-6e-pQy"/>
                     <constraint firstItem="9ro-uS-0Hz" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="LZW-Gz-plX"/>
-                    <constraint firstItem="9ro-uS-0Hz" firstAttribute="leading" secondItem="AZt-66-Y0R" secondAttribute="trailing" id="bpV-KJ-njn"/>
+                    <constraint firstItem="9ro-uS-0Hz" firstAttribute="leading" secondItem="AZt-66-Y0R" secondAttribute="trailing" constant="7" id="bpV-KJ-njn"/>
                     <constraint firstItem="AZt-66-Y0R" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="prY-Ot-IXb"/>
                     <constraint firstItem="EBv-Dm-qUn" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="urm-em-KD1"/>
                     <constraint firstItem="9ro-uS-0Hz" firstAttribute="bottom" secondItem="AZt-66-Y0R" secondAttribute="bottom" constant="8" id="xbX-Rm-JQ5"/>
@@ -53,4 +55,12 @@
             <point key="canvasLocation" x="132" y="108"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <namedColor name="backgroundColor">
+            <color red="0.96470588235294119" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondColor">
+            <color red="0.086274509803921567" green="0.52941176470588236" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

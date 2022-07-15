@@ -19,6 +19,7 @@ class AlertListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor(named: "backgroundColor")
         let nibName = UINib(nibName: "AlertListCell", bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: "AlertListCell")
     }
