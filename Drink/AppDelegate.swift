@@ -12,8 +12,6 @@ import UserNotifications
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    // 광역으로 UserNotificationCenter 를 둔다.
-    // var userNotificationCenter: UNUserNotificationCenter? - 안됨
     let userNotificationCenter = UNUserNotificationCenter.current()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -23,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // UserNotifications
         // alert 에 대한 사용자의 권한이 필요하다.
-        let authrizationOptions = UNAuthorizationOptions(arrayLiteral: [.alert, .badge, .sound])
-        userNotificationCenter.requestAuthorization(options: authrizationOptions) { _, error in
+        let authorizationOptions = UNAuthorizationOptions(arrayLiteral: [.alert, .badge, .sound])
+        userNotificationCenter.requestAuthorization(options: authorizationOptions) { _, error in
             if let error = error {
                 print("ERROR: notification authrization request \(error.localizedDescription)")
             }
